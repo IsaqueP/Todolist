@@ -1,0 +1,98 @@
+.ToDo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  word-break: break-word;
+  gap: 0.3rem;
+  background-color: #F2F2;
+  padding-left: 0.75rem;
+}
+
+.ToDo .container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.ToDo .container input{
+  position: absolute; 
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.ToDo .checkmark{
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.733);
+}
+
+.ToDo .container:hover input ~ .checkmark{
+  background-color: #ccc;
+}
+
+.ToDo .container input:checked ~ .checkmark{
+  background-color: #8E46EB;
+  border: 0;
+}
+
+.ToDo .container input:checked ~ .checkmark:hover{
+  background-color: #7e29ee;
+}
+
+
+
+.ToDo .container .checkmark:after{
+  content: '';
+  display: none;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  --webkite-transform: rotate(45deg);
+  --ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.ToDo .container input:checked ~ .checkmark:after{
+  display: block;
+}
+
+
+.ToDoText,
+.ToDoTextDone{
+  font-size: 1.1rem;
+  padding: .7rem 0;
+  border-radius: 3px;
+  color: #201f1eef;
+  width: 100%;
+  line-height: 1.25rem;
+}
+
+.ToDoTextDone{
+  color: gray;
+  text-decoration: line-through;
+}
+
+.ToDoTrash{
+  width: 2.9rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.ToDoTrash img{
+  width: 1.7rem;
+}
