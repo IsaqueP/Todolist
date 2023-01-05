@@ -1,6 +1,6 @@
 # Sobre o projeto
 
-[https://dev-finance-discover.netlify.app/](https://todolist-isaquep.vercel.app/)
+https://todolist-isaquep.vercel.app/
 
 Todolist é um site para quem quer organizar as tarefas do dia a dia.
 
